@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
+sudo pkill feh
+sudo killall omxplayer.bin
+screen -X -S stream1 quit
+screen -dmS stream1 sh -c 'omxplayer --win "0 0 800 480" rtsp://user:password@192.192.192.192:8327/videoMain -b --live; exec bash'
+/home/pi/cgi-bin/./2tone
+echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
+sleep 1s
+echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power

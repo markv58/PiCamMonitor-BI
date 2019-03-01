@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=BIPiCam http server
+Exec=/usr/bin/python /home/pi/CameraSRV.py &
