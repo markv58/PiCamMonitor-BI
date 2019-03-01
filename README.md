@@ -121,12 +121,13 @@ This will run the sub stream on an Amcrest and most other high resolution camera
 
 * ./install.sh
 
-After the reboot you will need to edit any start files you will use with your camera feeds. You can also adjust the screen brightness. All of the files are in the /home/pi/cgi-bin folder.
+After the reboot you will need to edit any start files you will use with your camera feeds. You can also adjust the screen brightness. All of the files are in the /home/pi/cgi-bin folder. There are copies in the BlueIris-PiCam directory if you need to replace one in the cgi-bin directory, just be sure to 'chmod +x <file name>' after you copy one.
 
 The echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness line is the brightness level 0 - 255
 
 After editing, a reboot will refresh everything and is recommended.
 
+This is the Camera1start file:
 
     #!/bin/bash
 
@@ -139,6 +140,7 @@ After editing, a reboot will refresh everything and is recommended.
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
+
 
 
 #### Triggering with Blue Iris
