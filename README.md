@@ -135,7 +135,7 @@ This is the Camera1start file:
     sudo pkill feh
     sudo killall omxplayer.bin
     screen -X -S stream1 quit
-    screen -dmS stream1 sh -c 'omxplayer --win "0 0 800 480" rtsp://user:password@192.192.192.120:554/cam/realmonitor?channel=1\&subtype=1 -b --live; exec bash'
+    screen -dmS stream1 sh -c 'omxplayer --win "0 0 800 480" rtsp://user:password@192.192.192.192:554/cam/realmonitor?channel=1\&subtype=1 -b --live; exec bash'
     /home/pi/cgi-bin/./2tone
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
