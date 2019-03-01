@@ -156,4 +156,4 @@ In the bottom it will be something like this:
 
     <ip of the Pi>:6502/cgi-bin/<file with stop at the end>
     
-The files that start with PF are for the Picture Frame option. It will display and files in the /home/pi/Pictures folder.    
+The files that start with PF are for the Picture Frame option. It will display any files in the /home/pi/Pictures folder.    
