@@ -1,5 +1,4 @@
 [Desktop Entry]
-
 Type=Applicaton
 Name=MagicMirror
 Exec=/home/pi/cgi-bin/camCtrl MMstart
