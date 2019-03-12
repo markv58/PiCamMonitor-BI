@@ -152,10 +152,9 @@ This is the Camera1start file:
 
 Use http://.  In the top it will be something like this:
 
-    <ip of the Pi>:6502/cgi-bin/<file with start at the end>
+    <ip of the Pi>:6502/cgi-bin/camCtrl?cam# - cam1, cam2, cam3, cam4
     
 In the bottom it will be something like this:
 
-    <ip of the Pi>:6502/cgi-bin/<file with stop at the end>
+    <ip of the Pi>:6502/cgi-bin/camCtrl?camSop
     
-The files that start with PF are for the Picture Frame option. It will display any files in the /home/pi/Pictures folder.    
