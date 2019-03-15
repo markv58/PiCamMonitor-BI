@@ -4,17 +4,17 @@
 ### END INIT INFO
 
 #Cameras
-camera1=rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1
-camera2=rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1
-camera3=rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1
-camera4=rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1
+camera1='rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
+camera2='rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
+camera3='rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
+camera4='rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
 
 
 #Screen Control
 case "$1" in
   cam1)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
-    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" $camera1 -b --live; exec bash'
+    screen -dmS stream2 sh -c 'omxplayer --win "0 0 800 480" '$camera1' -b --live; exec bash'
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
@@ -22,7 +22,7 @@ case "$1" in
     ;;
   cam2)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
-    screen -dmS stream3 sh -c 'omxplayer --win "0 0 800 480" $camera2 -b --live; exec bash'
+    screen -dmS stream3 sh -c 'omxplayer --win "0 0 800 480" '$camera2' -b --live; exec bash'
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
@@ -30,7 +30,7 @@ case "$1" in
     ;;
   cam3)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
-    screen -dmS stream4 sh -c 'omxplayer --win "0 0 800 480" $camera3 -b --live; exec bash'
+    screen -dmS stream4 sh -c 'omxplayer --win "0 0 800 480" '$camera3' -b --live; exec bash'
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
@@ -38,7 +38,7 @@ case "$1" in
     ;;
   cam4)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
-    screen -dmS stream5 sh -c 'omxplayer --win "0 0 800 480" $camera4 -b --live; exec bash'
+    screen -dmS stream5 sh -c 'omxplayer --win "0 0 800 480" '$camera4' -b --live; exec bash'
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
