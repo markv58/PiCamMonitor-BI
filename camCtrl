@@ -9,7 +9,7 @@ camera2='rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype
 camera3='rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
 camera4='rtsp://user:pass@xxx.xxx.xxx.xxx:554/cam/realmonitor?channel=1\&subtype=1'
 
-
+# ------------- Use extreme caution when editing below this line ---------------------------
 #Screen Control
 case "$1" in
   cam1)
