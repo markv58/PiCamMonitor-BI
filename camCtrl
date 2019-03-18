@@ -19,7 +19,6 @@ case "$1" in
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
     /home/pi/cgi-bin/./2tone
-    /home/pi/cgi-bin/./camStop
     ;;
   cam2)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
@@ -27,8 +26,7 @@ case "$1" in
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
-    /home/pi/cgi-bin/./2tone
-    /home/pi/cgi-bin/./camStop    
+    /home/pi/cgi-bin/./2tone   
     ;;
   cam3)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
@@ -37,7 +35,6 @@ case "$1" in
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
     /home/pi/cgi-bin/./2tone
-    /home/pi/cgi-bin/./camStop
     ;;
   cam4)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
@@ -45,8 +42,7 @@ case "$1" in
     echo 130 | sudo tee /sys/class/backlight/rpi_backlight/brightness
     sleep 1s
     echo 0 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
-    /home/pi/cgi-bin/./2tone
-    /home/pi/cgi-bin/./camStop    
+    /home/pi/cgi-bin/./2tone   
     ;;
   camStop)
     echo 1 | sudo tee /sys/class/backlight/rpi_backlight/bl_power
